@@ -267,3 +267,16 @@ Some thoughts on the future of test automation
 
 ncrease of test automation scope
  I think that the scope of test automation efforts is expanding beyond replicating the interaction between a user or a system and the application under test in an automated manner.  
+ Modular Based Testing Framework
+Implementing a modular framework will require testers to divide the application under test into separate units, functions, or sections, each of which will be tested in isolation. After breaking down the application into individual modules, a test script is created for each part and then combined to build larger tests in a hierarchical fashion. These larger sets of tests will begin to represent various test cases.
+
+A key strategy in using the modular framework is to build an abstraction layer, so that any changes made in individual sections won’t affect the overarching module.
+
+Advantages of a Modular Framework:
+
+If any changes are made to the application, only the module and it’s associated individual test script will needs to be fixed, meaning you won’t have to tinker with the rest of the application and can leave it untouched.
+Creating test cases takes less effort because test scripts for different modules can be reused.
+Disadvantages of a Modular Framework:
+
+Data is still hard-coded into the test script since the tests are executed separately, so you can’t use multiple data sets.
+Programming knowledge is required to set up the framework.
