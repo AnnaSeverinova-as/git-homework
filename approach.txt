@@ -1,3 +1,269 @@
 Підхід до автоматизованого тестування - це етап тестування автоматизації, який проводиться для перевірки того, працюють чи нові функціональні можливості,
 додані до програмного забезпечення, чи ні. Технічне обслуговування при тестуванні автоматизації виконується, коли додаються нові сценарії автоматизації,
 і їх потрібно переглядати та підтримувати з метою підвищення ефективності сценаріїв автоматизації з кожним наступним циклом випуску
+
+
+Here’s a summary of some of the best QA Automation tools, along with their essential features:
+
+1. Testsigma
+
+Testsigma is built for quality engineering teams that need a lean test automation setup that enables scale and speed concurrently. You can write, run, debug, and analyze self-healing tests in simple English for web, mobile apps, APIs, databases, and more using Testsigma. You can customize the platform using Java, but the codeless test automation makes test creation quick and easy for testers and non-technical team members.
+
+Testsigma's built-in test lab offers 3000+ real devices and browsers on high availability cloud, making it easy to scale your test automation efforts. The platform's intelligent algorithm automatically detects and fixes page elements, ensuring that tests run smoothly even when changes are made to the application under test. Testsigma also provides detailed test reports that include information about test results, test execution time, device details, and other critical testing metrics, which help identify quality trends over time.
+
+Testsigma also offers native integrations with popular tools such as Jira, Jenkins, GitHub, and Slack, allowing for better collaboration among team members and ensuring continuous delivery and testing. The visual testing feature captures screenshots of your application and compares them with baseline images, highlighting any differences that need to be addressed. With parallel test execution, continuous testing, and comprehensive test reports, Testsigma helps teams achieve faster release cycles and faster feedback loops.
+
+Selenium
+While Selenium is a powerful and flexible tool, there are some limitations to its use in software testing and QA automation:
+
+Limited support for desktop applications: Selenium is primarily designed for testing web applications and has limited support for desktop applications.
+
+Inability to handle Captchas: Selenium cannot handle CAPTCHA tests, which are used to verify that a user is human and not a robot.
+
+Limited support for mobile testing: Selenium supports mobile testing, but it has limited support for mobile platforms and can be challenging to use on mobile devices.
+
+No built-in reporting: Selenium does not have built-in reporting capabilities, which can make it challenging to analyze and share test results.
+
+Maintenance overhead: Selenium requires regular maintenance and updates to keep up with changes in web browsers and web applications, which can be time-consuming and require technical expertise.
+
+Limited support for non-browser-based testing: Selenium is primarily designed for testing web applications, and it has limited support for non-browser-based testing, such as testing APIs or databases
+
+Requires programming knowledge: Selenium requires knowledge of programming languages like Java, Python, or C#, which can be a barrier for some users who need to become more familiar with these languages.
+
+Telerik Test Studio
+Based on customer reviews and feedback, some common cons of using Telerik Test Studio for QA automation are:
+
+Steep learning curve: Some users have reported that Telerik Test Studio has a steep learning curve and can be challenging to use for beginners.
+
+Limited support for non-web applications: Telerik Test Studio is primarily designed for testing web applications and has limited support for non-web applications.
+
+Slow execution time: Some users have reported that the execution time for tests on Telerik Test Studio can be slow, which can be frustrating when running a large number of tests.
+
+Limited integration with other tools: Customers have reported that Telerik Test Studio has limited integration capabilities with other tools and platforms, which can make it challenging to integrate into existing workflows.
+
+Lack of features: Some customers have reported that Telerik Test Studio has limited features compared to other testing tools, which can make it challenging to address all of their testing needs.
+
+
+Best Practices to build a Test Automation Strategy
+1. Define Goals
+Before starting automation, you need to be clear about your long-term and short-term goals of test automation. You should clearly put the road map and discuss it with higher management and stakeholders. Some of the pointers might help you to define the goal.
+
+Why are we considering test automation for this project
+The expected business value from automation or ROI
+The scope of automation
+A high-level procedure to deliver the automation
+The planned percentage of automation (In a gradual manner ex: quarter wise)
+The end goal of automation
+2. Test Approach Planning
+There are different levels of testing, many times automation is confused with end-to-end testing, but there are many levels. The best approach is to create test pyramids.
+
+Unit Testing: Unit Testing is the backbone of the automation strategy, and false failures are very less. Though Unit testing is part of white box testing, having good coverage of unit testing reduces the regression.  Unit testing should be mandatory for any features that are being developed. The modern infrastructure provides an option to put the quality gate where you can define the minimum percentage of Unit Test coverage before pushing it to the repository.  The Unit Testing coverage percentage typically ranges from 80% to 90%; however it depends on the application framework, complexity, and type of application.
+Also Read: How do you ensure maximum test coverage?
+
+Integration and API Testing: Nowadays, almost all organizations follow API-driven architecture for development. API testing acts as middle-level or integration testing, and it’s easy to achieve. The clear API testing technique produces great output. API testing helps to validate the business logic to a great extent. In the absence of an API, consider having integrated component testing.
+UI Testing: UI testing focuses on UI elements. Visual Validation testing is one example of UI Testing. The UI testing mostly validates the styles, layouts, alignments, fonts, etc. The well-defined UI testing helps to reduce UI bugs and provides a smoother User experience (UX).
+End to End Testing: The most focused area in test automation, end-to-end testing focuses mostly on functionality and workflow. The end-to-end testing mostly replicates the user behavior using simulation. This is the exact replacement for manual testing. End to end Testing should be well written.  This also requires timely maintenance to produce accurate output, so while defining a strategy, you need to consider it.
+Other Areas of Testing to Focus on:
+
+Cross Browser Testing: The Testing team needs to work with the product and business team to understand the cross browser requirements. Your application should be compatible with different devices such as Chrome, Firefox, Edge, Safari, etc. 
+Cross Platform Testing: The Cross browser can be multiple browsers on the same operating system or multiple browsers on multiple operating systems; if the application is supported by multiple operating systems such as Windows, Mac, Linux, iOS, Android, etc, then you need to define the plan to achieve them. You need to consider both the native app and browser. You can consider a cloud-based platform like Browserstack to achieve such requirements with ease.
+Read More: How to set up QA processes from scratch
+
+3. Choose a Framework
+Once you know the business value, the most critical part is the type of framework you choose. There are different types of automation frameworks; you need to discuss them with the team and choose the right one.
+
+Linear Automation Framework (Record & Playback)
+
+The record and playback framework works when the user simply records the tests and executes them after. The record and playback tools are well suited for beginners. The record and playback tool is not recommended as it has a lot of limitations.
+
+Pros:
+
+Easy to set up
+Easy to automate the scripts
+Less technical knowledge required
+Cons
+
+Requires a lot of maintenance
+Almost impossible to use in the long run.
+Data-Driven Test Framework
+
+The data-driven testing simply separates the data and actual tests. In a data-driven framework, the data is stored in external files like CSV, JSON, etc., and later it is used in your script dynamically. 
+
+Pros:
+
+This framework is best when your application has frequent changes in data
+Running the same tests with multiple sets of data is easy and requires less effort
+Cons:
+
+The data-driven framework requires good technical skills
+Need to spend time separating data, preparing data files, and using them in your scripts.
+Code reuse will be limited
+Consumes more time
+Keyword driven framework
+
+In Keyword driven framework, the keywords are mapped with the action performed on GUI. For example, the keyword “enter the username”  types the username on GUI. The keywords are separated from testing logic and stored separately whenever the keyword is encountered, the mapped functions will be called to perform actions.
+
+Pros:
+
+The keyword-driven framework helps to achieve a high degree of code reuse.
+Easy to use for beginner-level testers.
+Cons:
+
+Keyword driven framework is time-consuming
+High setup cost. 
+Rich technical expertise is required.
+Page Object Model
+
+Page object model is the most popular framework design strategy in automation. It is also called POM. The page object model creates the object repository for storing the HTML elements. The HTML elements (Objects) of each web page are stored in a separate file; then, the page objects will be used for creating test scripts.
+
+Pros:
+
+The page object model offers increased code reuse.
+Ease of maintenance
+Good readability
+Cons:
+
+The Page object model cannot be used for multiple projects as it is not generic
+Takes time to set up
+One should be technically skilled to set up the framework
+Modular driven framework
+
+The modular-driven framework divides the test case into small modules. The module can be a small set of functions, or a set of features, that the application has. Tests are created individually and combined to make a larger test suite. The master script generally calls the required scenarios/modules.
+
+Pros:
+
+Ease of maintenance
+Easy to develop the test script as they are smaller
+Cons:
+
+The setting up framework can be challenging
+Hard-coded data ends up duplicating tests
+Library architecture framework
+
+The library architecture framework is similar to a modular-driven framework; In addition to a modular-based framework feature, it provides the additional benefit of common functions. Similar tasks which can be reused in multiple places are separated and stored in common files/directories. 
+
+Pros:
+
+Provides a high amount of code reuse
+Maintenance doesn’t require much time
+Cons:
+
+Expert-level technical skills are required to achieve this framework.
+Writing common libraries and separating them makes the framework more complex.
+Reduced readability
+Behavior Driven Framework
+
+The BDD frameworks use the gherkin language format (Given, when, then). The acceptance criteria given by the product team will be mapped to the test cases. The BDD framework contains the feature files. Each feature file will have a set of scenarios in plain English language. These scenarios in the feature files are mapped to the step definition files to write the execution logic. 
+
+Pros:
+
+Clearly defined scenarios
+Good level of code reuse
+Easy to understand for non-technical teams
+Easy to map the data into test scripts
+Cons:
+
+Test case creation takes time
+Difficult to maintain
+One needs to understand the requirement clearly before writing the test cases.
+Read More: BDD vs TDD vs ATDD: Key Differences
+
+Hybrid framework 
+
+The Hybrid Framework can be a combination of any of the above-mentioned frameworks; as you are aware that every framework has some advantages and disadvantages. Based on the required set of features, one can combine the above type of framework to create a hybrid framework.
+
+Pros:
+
+Adds flexibility to your framework
+Increases the code reusability
+Easy to maintain
+Customization of reports and analysis
+Cons:
+
+Requires in-depth understanding of testing 
+One must be highly skilled to achieve this framework
+A poorly designed framework can become worthless to an organization
+4. Evaluate and Choose the Tool
+The testing tool should be carefully evaluated, and pick the right tool. Remember, “Never choose the best testing tool in the market; always choose the best testing tool for your organization”. That means the best tool in the market may not be the best fit for your organization. 
+
+While evaluating a testing tool, you must consider  multiple things, such as
+
+The scope of the test automation tool
+Expected functionality from the test automation tool
+Supported platforms/browsers
+Need to evaluate if it fits your domain
+Cost
+The programming language support
+Community support and documentation
+Learning involved 
+The automation tool evaluation is typically done by picking a set of tools that fit best into your organization/team and then by performing the Proof of concept (POC) to decide.
+
+Also Read: What to consider when evaluating a Test Automation Tool
+
+The tool will be evaluated by answering a set of questions as mentioned above and then by writing a small few test cases. The proof of concept can also involve integrating with CI/CD pipeline to evaluate how well it fits into the DevOps framework.
+
+Once you evaluate and choose the tool, you must discuss it with management by clearly showcasing facts such as limitations, advantages, etc. One must not be biased based on his expertise and learning, the tool must be evaluated as per the organization’s requirement.
+
+5. Test Automation Environment
+You need to be very clear about where the test data will be stored, where the automation execution takes place, how the report will be stored and shared, how long the old report will be stored etc. You should also know which environment the application under test will be used for validation, such as dev, staging, production, or all of these, etc. 
+
+If you are adopting DevOps practices, then the configuration and triggers of the pipeline come in place. 
+
+Also Read: How to implement a Continuous Testing strategy for DevOps?
+
+6. Risk Analysis
+It is essential to analyze the risk and communicate it to management. Automation testing may have some risks based on the tools and strategy you are using. For example, if you are creating a separate credential for test automation and if you decide to use the production environment, then imagine the risk. If such a risk occurs, what is the mitigation plan? Before starting to test automation, you should predict the risks that automation brings and the mitigation plan, etc.
+
+7. Define Automation Team Working Strategy
+This is the high-level approach to planning the automation; this includes who is playing what role. You can follow the sprint-1 strategy for automation. It can also include automation test case review processes.
+
+Team members’ roles and responsibilities, who will be heading, point of contact, etc.
+When test cases are automated, for example, same sprint or sprint – 1
+How the testing members are divided, some follows a separate automation team, some combine manual and automation testers, and some organization follows the scrum team, where dedicated automation members for each team.
+8. Learning Goals
+The learning curve has to be evaluated while choosing the tool; if you are switching from one tech stack to another, or initiating a manual tester to automation tester transition, then there is learning involved in it. When there is learning involved, productivity cannot be 100% as team members need to spend time learning. So, you need to set a goal for learning. The management should also be aware of this, as productivity may not be as expected until the learning completes.
+
+9. Create, Execute and Maintain Tests
+You have chosen the tool and technology.  The right tool is in place; at this point, you can bring automation into reality by implementing them. 
+
+Start creating the automation scripts. 
+Decide upon what can be automated and what cannot.
+Start with the most critical features and quick wins.
+Once you create the test cases, execute them often. Timely maintenance is expected for automation test cases as there will be active development in the background.
+
+Create, execute and maintain repeats as your day-to-day work.
+
+
+10. Execution Plans and DevOps Integration
+Once you have the test automation scripts ready, you need to plan for execution.
+
+Consider creating test suites like smoke, regression, sanity, etc.
+Define execution strategy; for example – smoke needs to run every day, regression twice a week, etc.
+Have a feature-wise test suite; whenever there are feature changes, there is no need to execute the whole regression suite; one can just execute only the required test suites.
+Consider DevOps integration which makes testers’ and developers’ jobs easier.
+The DevOps integration also reduces the dependency of the testing team; anybody can execute and get the report.
+11. Reporting
+The reporting is most important in the test automation tool. 
+
+The reporting should not contain any technical details as it may confuse the stakeholders. 
+The report must have numbers of total test cases, passed, failed, etc. 
+Consider having graphs, trends, etc., to make the report more attractive. 
+The report must be clearly understandable for any non-technical person
+You must define a strategy around report sharing, like recipients, when to share and how often, etc.
+Store a report in a commonplace; one should be able to access it anytime when needed.
+Read More: Top 5 Selenium Reporting Tools
+
+12. Review, Analyze and  Retrospect
+This is a never-ending task; you need to continuously review your test scripts, understand what is causing false failures, and understand what is impacting test case creation. How can you do it better? This task is not only for test case creation. This may include modifying the whole automation strategy as well, but this should not deviate from your original goals.
+
+Test automation can be the only way of testing in your organization; the success of test automation depends on how well the strategy is defined and how it is implemented. Any mistakes that you make while building a strategy can make a big impact. You should be very careful and unbiased while building a test automation strategy. The management should be aware of both good and bad. Ask for opinions and feedback, and try to avoid making decisions independently. Decide based on collected feedback and opinions.
+
+BrowserStack allows you to perform manual and automated tests using different frameworks and languages. You can run Selenium, Cypress, Playwright,  Puppeteer, Appium, Espresso, and XCUI tests seamlessly on 3000+ devices and browsers.
+
+
+
+
+Some thoughts on the future of test automation
+
+ncrease of test automation scope
+ I think that the scope of test automation efforts is expanding beyond replicating the interaction between a user or a system and the application under test in an automated manner.  
